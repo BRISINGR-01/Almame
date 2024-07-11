@@ -5,8 +5,14 @@ import path from "path";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 	const filePath = path.resolve("/tmp", req.query.id + ".jpg");
+	console.log(req.headers, typeof req.body);
 
 	if (req.method !== "POST") {
+		if (!fs.existsSync(filePath)) {
+			res.status(404).end();
+			return;
+		}
+
 		const stat = fs.statSync(filePath);
 
 		res.writeHead(200, {
