@@ -17,7 +17,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 			return;
 		}
 
-		res.status(200).json(data.data);
+		res
+			.writeHead(200, {
+				"access-control-allow-origin": "*",
+				"access-control-allow-headers": "*",
+				"access-control-allow-methods": "*",
+			})
+			.json(data.data);
 		return;
 	}
 

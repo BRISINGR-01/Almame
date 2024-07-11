@@ -32,8 +32,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 	}
 
 	try {
+		res.writeHead(200, {
+			"access-control-allow-origin": "*",
+			"access-control-allow-headers": "*",
+			"access-control-allow-methods": "*",
+		});
 		req.pipe(fs.createWriteStream(filePath)).once("close", () => {});
-		res.status(200).end();
+		res.end();
 	} catch (error) {
 		res.status(400).end(error?.toString());
 	}
