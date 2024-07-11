@@ -1,46 +1,40 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import fs from "fs";
 import type { NextApiRequest, NextApiResponse } from "next";
-import type { Tables } from "../../../types/supabase";
-
-type Danger = Tables<"danger">;
+import path from "path";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-	console.log(req.query.id);
-	console.log(req.query);
-	console.log(req.body);
-	console.log(req.method);
+	const filePath = path.resolve("/tmp", req.query.id + ".jpg");
 
-	res.end();
+	if (req.method !== "POST") {
+		const stat = fs.statSync(filePath);
 
-	return;
+		res.writeHead(200, {
+			"Content-Type": "image/jpeg",
+			"Content-Length": stat.size,
+		});
 
-	// const supabase = createClient();
+		const readStream = fs.createReadStream(filePath);
+		// We replaced all the event handlers with a simple call to readStream.pipe()
+		readStream.pipe(res);
+		return;
+	}
 
-	// if (req.method === "GET") {
-	// 	const data = await supabase.from("danger").select().eq("id", req.query.id);
+	if (typeof req.query.id !== "string") {
+		res.status(400).json({ error: "No id" });
+		return;
+	}
 
-	// 	if (data.error) {
-	// 		res.status(400).json({ error: data.error.message });
-	// 		return;
-	// 	}
-
-	// 	res.status(200).json(data.data);
-	// 	return;
-	// }
-
-	// if (req.method === "POST") {
-	// 	if (!req.body) {
-	// 		res.status(400).json({ error: "No request body" });
-	// 		return;
-	// 	}
-
-	// 	if (typeof req.query.id !== "string") {
-	// 		res.status(400).json({ error: "No id" });
-	// 		return;
-	// 	}
-
-	// 	fs.writeFileSync(path.resolve(__dirname, "../../../", "public", req.query.id), req.body);
-	// }
-
-	// res.status(402).json({ error: "Method not allowed" });
+	try {
+		req.pipe(fs.createWriteStream(filePath)).once("close", () => {});
+		res.status(200).end();
+	} catch (error) {
+		res.status(400).end(error?.toString());
+	}
 }
+
+export const config = {
+	api: {
+		bodyParser: false,
+	},
+};
