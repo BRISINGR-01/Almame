@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://ictw.agr.upv.es/~team6/list.html -->
+<html lang="en" class=" gvcxadyowa idc0_343"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./list_files/leaflet.css">
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background-color: #e6ffe6;
+      }
+      .urgency {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.8rem;
+        width: 1.8rem;
+        top: 6%;
+        right: 10px;
+        border-radius: 25px;
+        transition: width 0.3s;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.1rem;
+        overflow: hidden;
+      }
+      .low {
+        background: #ffcc00;
+      }
+      .high {
+        background: red;
+      }
+      .medium {
+        background: #ff9829;
+      }
+      .list-item:hover .urgency {
+        width: 6rem;
+        transition: 0.3s;
+        display: block;
+      }
+      .urgency-text {
+        display: block;
+        color: transparent;
+        margin-top: 0.2rem;
+      }
+
+      .list-item:hover .urgency-text {
+        color: #fff !important;
+      }
+      #list {
+        padding: 50px;
+        height: 90%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        overflow-y: scroll;
+        padding: 20px;
+        box-sizing: border-box;
+        margin: 4% 0 0 0;
+      }
+
+      .topnav {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 15px 10px;
+        border-radius: 25px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+      }
+      .info {
+        font-size: 1.2rem;
+        font-weight: 500;
+        flex-grow: 1;
+      }
+      .topnav a {
+        color: #333;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 5px;
+        border-radius: 20px;
+        transition: background-color 0.3s;
+      }
+
+      .topnav a.active {
+        background-color: #98ff98;
+        color: #333;
+      }
+      .topnav a:hover {
+        background-color: #f0f0f0;
+      }
+
+      .list-item {
+        display: flex;
+        align-items: center;
+        height: 48px;
+        position: relative;
+        background-color: #fff;
+        margin-bottom: 10px;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 7px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: color 0.3s;
+        transition: translate 0.3s;
+      }
+      .list-item-line-high {
+        border-left: 5px solid #ff0000;
+      }
+      .list-item-line-medium {
+        border-left: 5px solid #ff9829;
+      }
+      .list-item-line-low {
+        border-left: 5px solid #ffcc00;
+      }
+      .list-item:hover {
+        transition: color 0.3s;
+        transition: translate 0.3s;
+        cursor: pointer;
+        transform: translateY(-0.12vw);
+        z-index: 100;
+        box-shadow: rgba(0, 0, 0, 0.1) 5px 10px 15px -3px,
+          rgba(0, 0, 0, 0.05) 2px 4px 6px -2px;
+      }
+    </style>
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1187.0" data-gr-ext-installed="">
+    <div class="topnav">
+      <a class="active" href="https://ictw.agr.upv.es/~team6/list.html">List</a>
+      <a href="https://ictw.agr.upv.es/~team6/index.html">Map</a>
+    </div>
+
+    <div id="list">
+      <!-- Example list items -->
+      <div class="list-item" id="template" style="display:none">
+        <span class="info"> Danger 1: Description </span>
+        <p class="urgency">
+          <span class="urgency-text">URGENT</span>
+        </p>
+      </div>
+      <!-- Add more list items here -->
+    <div class="list-item list-item-line-low" id="template" style="display: flex;">
+        <span class="info">Illeagal dumping</span>
+        <p class="urgency low">
+          <span class="urgency-text">LOW</span>
+        </p>
+      </div><div class="list-item list-item-line-medium" id="template" style="display: flex;">
+        <span class="info">Pothole</span>
+        <p class="urgency medium">
+          <span class="urgency-text">MEDIUM</span>
+        </p>
+      </div><div class="list-item list-item-line-high" id="template" style="display: flex;">
+        <span class="info">Fallen tree</span>
+        <p class="urgency high">
+          <span class="urgency-text">HIGH</span>
+        </p>
+      </div><div class="list-item list-item-line-high" id="template" style="display: flex;">
+        <span class="info">Dangerous intersection</span>
+        <p class="urgency high">
+          <span class="urgency-text">HIGH</span>
+        </p>
+      </div><div class="list-item list-item-line-medium" id="template" style="display: flex;">
+        <span class="info">Fallen rooftiles</span>
+        <p class="urgency medium">
+          <span class="urgency-text">MEDIUM</span>
+        </p>
+      </div><div class="list-item list-item-line-low" id="template" style="display: flex;">
+        <span class="info">Escaped animal</span>
+        <p class="urgency low">
+          <span class="urgency-text">LOW</span>
+        </p>
+      </div><div class="list-item list-item-line-high" id="template" style="display: flex;">
+        <span class="info">Cat in tree</span>
+        <p class="urgency high">
+          <span class="urgency-text">HIGH</span>
+        </p>
+      </div><div class="list-item list-item-line-high" id="template" style="display: flex;">
+        <span class="info">bdbdbs</span>
+        <p class="urgency high">
+          <span class="urgency-text">HIGH</span>
+        </p>
+      </div><div class="list-item list-item-line-high" id="template" style="display: flex;">
+        <span class="info">Lalala</span>
+        <p class="urgency high">
+          <span class="urgency-text">HIGH</span>
+        </p>
+      </div><div class="list-item list-item-line-medium" id="template" style="display: flex;">
+        <span class="info">rccv</span>
+        <p class="urgency medium">
+          <span class="urgency-text">MEDIUM</span>
+        </p>
+      </div></div>
+
+    <script type="module">
+      import { getDangers } from "./script.js";
+
+      const template = document.getElementById("template");
+
+      getDangers().then((res) => {
+        for (const danger of res) {
+          const newChild = template.cloneNode(true);
+          newChild.style.display = "flex";
+          newChild.querySelector(".urgency-text").innerText =
+            danger.level.toUpperCase();
+          newChild.querySelector(".urgency").classList.add(danger.level);
+          newChild.querySelector("span").innerText = danger.description;
+          newChild.classList.add(`list-item-line-${danger.level}`);
+          newChild.addEventListener("click", () => {
+            window.localStorage.selected = danger.id;
+            window.location.href = "index.html";
+          });
+          template.parentElement.appendChild(newChild);
+        }
+      });
+    </script>
+  
+
+<deepl-input-controller><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://cofdbpoegempjloogbagkncekinflcnj/build/content.css"><div dir="ltr"><div class="dl-input-translation-container svelte-95aucy"><div></div></div></div></template></deepl-input-controller></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

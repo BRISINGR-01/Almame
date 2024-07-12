@@ -1,40 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Safespot
 
-## Getting Started
+## Overview
 
-First, run the development server:
+_Safespot_ is a collaborative project developed during the International Week in Valencia, as part of my studies at Fontys University of Applied Sciences. The app allows users to share and review dangers around the city, providing a community-driven approach to enhance public safety.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **User Reports**: Users can report dangerous spots in the city.
+- **Reviews**: Users can review and comment on reported dangers.
+- **Real-time Updates**: Reports and reviews are updated in real-time.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Database
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Supabase**: A backend-as-a-service providing a database, authentication, and real-time capabilities.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Server
 
-## Learn More
+- **Next.js**: A React framework for server-side rendering and building static web applications. It handles the data and file uploads and fetching. Uploaded with **Vercel**
 
-To learn more about Next.js, take a look at the following resources:
+### Mobile App
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **MIT App Inventor**: A drag-and-drop builder for Android apps. The project file is provided as `app.aia`, which can be converted to an APK file on the MIT App Inventor website.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Website
 
-## Deploy on Vercel
+- **HTML, JavaScript, Bootstrap**: The frontend is built with plain HTML, JavaScript, and styled using Bootstrap for responsive design. It uses **Leaflet** to display an interactive app of the dangers.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Installation and Setup
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Next.js Server
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/danger-alert-app.git
+   cd danger-alert-app/server
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env.local` file in the root directory and add your Supabase credentials:
+
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+   ```
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   The server should now be running on [http://localhost:3000](http://localhost:3000).
+
+### Android App
+
+1. Download the `app.aia` file from the repository.
+2. Open [MIT App Inventor](http://ai2.appinventor.mit.edu/).
+3. Click on "Projects" -> "Import project (.aia) from my computer" and select the `app.aia` file.
+4. Once imported, you can build the APK by clicking on "Build" -> "App (save .apk to my computer)".
+
+### Website
+
+1. Navigate to the `website` directory:
+
+   ```bash
+   cd danger-alert-app/website
+   ```
+
+2. Open `index.html` in your preferred web browser to view the website.
+
+## Usage
+
+### Reporting a Danger
+
+1. Open the mobile app or visit the website.
+2. Navigate to the "Report Danger" section.
+3. Fill in the details about the danger and submit the report.
+
+### Reviewing Dangers
+
+1. Open the mobile app or visit the website.
+2. Navigate to the "Map" section.
+3. Browse through reported dangers.

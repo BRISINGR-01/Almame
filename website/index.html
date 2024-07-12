@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://ictw.agr.upv.es/~team6/ -->
+<html lang="en" class=" lejsgiuvl idc0_343"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index_files/leaflet.css">
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+      }
+
+      #map {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .topnav {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 15px 10px;
+        border-radius: 25px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+      }
+
+      .topnav a {
+        color: #333;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 5px;
+        border-radius: 20px;
+        transition: background-color 0.3s;
+      }
+
+      .topnav a.active {
+        background-color: #98ff98;
+        color: #333;
+      }
+
+      .topnav a:hover {
+        background-color: #f0f0f0;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1187.0" data-gr-ext-installed="">
+    <div class="topnav">
+      <a href="https://ictw.agr.upv.es/~team6/list.html">List</a>
+      <a class="active" href="https://ictw.agr.upv.es/~team6/map.html">Map</a>
+    </div>
+
+    <div id="map" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-448px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="./index_files/1558.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(779px, 337px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1557.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(779px, 81px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1558(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(523px, 337px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1558(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1035px, 337px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1559.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(779px, 593px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1557(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(523px, 81px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1557(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1035px, 81px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1559(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(523px, 593px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1559(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1035px, 593px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1556.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(779px, -175px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1558(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(267px, 337px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1558(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1291px, 337px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1560.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(779px, 849px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1556(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(523px, -175px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1556(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1035px, -175px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1557(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(267px, 81px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1557(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1291px, 81px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1559(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(267px, 593px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1559(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1291px, 593px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1560(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(523px, 849px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1560(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1035px, 849px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1556(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(267px, -175px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1556(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1291px, -175px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1560(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(267px, 849px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1560(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1291px, 849px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1558(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(11px, 337px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1558(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1547px, 337px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1557(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(11px, 81px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1557(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1547px, 81px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1559(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(11px, 593px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1559(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1547px, 593px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1556(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(11px, -175px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1556(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1547px, -175px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1560(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(11px, 849px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1560(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1547px, 849px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1558(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-245px, 337px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1558(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1803px, 337px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1557(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-245px, 81px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1557(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1803px, 81px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1559(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-245px, 593px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1559(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1803px, 593px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1556(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-245px, -175px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1556(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1803px, -175px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1560(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-245px, 849px, 0px); opacity: 1;"><img alt="" role="presentation" src="./index_files/1560(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1803px, 849px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"><img src="./index_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(1057px, 413px, 0px);"><img src="./index_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(1054px, 413px, 0px);"><img src="./index_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(1060px, 413px, 0px);"><img src="./index_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(1051px, 416px, 0px);"><img src="./index_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(1059px, 409px, 0px);"><img src="./index_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(1063px, 417px, 0px);"><img src="./index_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(1056px, 414px, 0px);"><img src="./index_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(2059px, 125777px, 0px);"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"><img src="./index_files/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(1057px, 413px, 0px); z-index: 413;"><img src="./index_files/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(1054px, 413px, 0px); z-index: 413;"><img src="./index_files/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(1060px, 413px, 0px); z-index: 413;"><img src="./index_files/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(1051px, 416px, 0px); z-index: 416;"><img src="./index_files/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(1059px, 409px, 0px); z-index: 409;"><img src="./index_files/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(1063px, 417px, 0px); z-index: 417;"><img src="./index_files/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(1056px, 414px, 0px); z-index: 414;"><img src="./index_files/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(2059px, 125777px, 0px); z-index: 125777;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(523189px, 398977px, 0px) scale(2048);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="https://ictw.agr.upv.es/~team6/#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="https://ictw.agr.upv.es/~team6/#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors</div></div></div></div>
+
+    <script defer="" src="./index_files/leaflet.js"></script>
+    <script type="module">
+      import { getDangers } from "./script.js";
+
+      async function initMap() {
+        var map = L.map("map").setView([39.46975, -0.37739], 12);
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution:
+            'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+          maxZoom: 18,
+        }).addTo(map);
+
+        const data = await getDangers();
+        console.log(data);
+        data.forEach((danger) => {
+          const marker = L.marker([danger.latitude, danger.longitude]);
+          marker.addTo(map);
+          marker.bindPopup(
+            `<b>${danger.description}</b><br><img src="https://ictw.agr.upv.es/~team6/${danger.id}.webp"></img>`
+          );
+        });
+
+        if (localStorage.selected) {
+          const selectedDanger = data.find(
+            (danger) => danger.id == localStorage.selected
+          );
+          localStorage.removeItem("selected");
+          console.log(selectedDanger);
+
+          map.setView([selectedDanger.latitude, selectedDanger.longitude], 15);
+        }
+      }
+      window.onload = initMap;
+    </script>
+  
+
+</body></html>
